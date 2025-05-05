@@ -2,14 +2,7 @@
 
 import React, { useState } from 'react'
 import axios from 'axios'
-import {
-  FiLink,
-  FiSearch,
-  FiCpu,
-  FiZap,
-  FiClipboard,
-  FiCode,
-} from 'react-icons/fi'
+import { FiLink, FiSearch, FiCpu, FiZap, FiClipboard } from 'react-icons/fi'
 
 // Brand logo SVG component
 const BrandLogo = () => (

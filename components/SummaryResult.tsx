@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { Summary } from '../src2/types'
+import { Summary } from '../types'
 import { FiExternalLink, FiClock } from 'react-icons/fi'
 
 interface SummaryResultProps {
