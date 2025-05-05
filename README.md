@@ -1,9 +1,5 @@
 # Synapse: AI-Powered Web Summarizer
 
-<div align="center">
-  <img src="public/logo.png" alt="Synapse Logo" width="120" />
-</div>
-
 Synapse is a powerful web application that extracts and summarizes the key content from any website URL. Built with Next.js and Tailwind CSS, it provides instant, readable summaries to help users quickly understand website content without having to read through everything.
 
 ## ✨ Features
