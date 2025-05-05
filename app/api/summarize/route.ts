@@ -488,17 +488,5 @@ async function generateSimpleSummary(
     <h3>Website Type</h3>
     <p>This appears to be a ${contentType}.</p>
     
-    <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
-      <h4 style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">Note</h4>
-      <p style="color: rgba(255,255,255,0.6); font-size: 0.8rem;">
-        This is a simplified summary created without a true AI model. For more accurate summaries, 
-        you would integrate with OpenAI or another language model API.
-        ${
-          proxied
-            ? ' This content was retrieved via a proxy service as the original website restricted direct access.'
-            : ''
-        }
-      </p>
-    </div>
   `
 }

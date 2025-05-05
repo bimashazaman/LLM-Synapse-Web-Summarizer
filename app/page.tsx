@@ -177,43 +177,12 @@ export default function Home() {
                 </p>
               </div>
             )}
-
-            {/* Example URLs */}
-            <div className='mt-6 text-sm'>
-              <p className='text-gray-400 mb-3'>Try these examples:</p>
-              <div className='flex flex-wrap gap-2'>
-                {['wikipedia.org', 'bbc.com', 'github.com', 'medium.com'].map(
-                  (example) => (
-                    <button
-                      key={example}
-                      type='button'
-                      className='inline-flex items-center px-3 py-1 rounded-full bg-surface-light/20 hover:bg-primary/20 text-gray-300 text-xs'
-                      onClick={() => setUrl(`https://${example}`)}
-                    >
-                      <FiCode className='mr-1' size={12} />
-                      {example}
-                    </button>
-                  )
-                )}
-              </div>
-            </div>
           </form>
         </div>
 
         {/* Results Section */}
         {summary && (
           <div className='card fade-in' style={{ animationDelay: '0.3s' }}>
-            <div className='flex justify-between items-center mb-6'>
-              <div className='flex items-center'>
-                <div className='h-8 w-8 rounded-full bg-gradient-1 flex items-center justify-center mr-3'>
-                  <FiClipboard size={16} color='white' />
-                </div>
-                <h2 className='m-0'>Summary Results</h2>
-              </div>
-              <div className='text-xs bg-primary/20 px-3 py-1 rounded-full text-primary-light'>
-                AI Generated
-              </div>
-            </div>
             <div
               className='summary-content'
               dangerouslySetInnerHTML={{ __html: summary }}
