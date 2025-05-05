@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Synapse: AI-Powered Web Summarizer
 
-## Getting Started
+<div align="center">
+  <img src="public/logo.png" alt="Synapse Logo" width="120" />
+</div>
 
-First, run the development server:
+Synapse is a powerful web application that extracts and summarizes the key content from any website URL. Built with Next.js and Tailwind CSS, it provides instant, readable summaries to help users quickly understand website content without having to read through everything.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ✨ Features
+
+- **Instant Website Summarization**: Enter any URL and get a concise summary within seconds
+- **Proxy Support**: Advanced techniques to access websites that typically block web scraping
+- **Elegant UI**: Modern, responsive interface with subtle animations
+- **Content Type Detection**: Automatically identifies if content is a news article, blog post, product page, etc.
+- **Error Handling**: Robust fallbacks when sites can't be accessed or content extraction fails
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18.x or higher
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+
+   ```bash
+   https://github.com/bimashazaman/LLM-Synapse-Web-Summarizer.git
+   cd LLM-Synapse-Web-Summarizer
+   ```
+
+2. Install dependencies
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Run the development server
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## 🔧 How It Works
+
+Synapse extracts website content using the following approach:
+
+1. **Fetching**: Uses axios to retrieve webpage HTML content
+2. **Parsing**: Employs cheerio to parse HTML and extract meaningful content
+3. **Proxy Support**: Implements multiple proxy methods for websites that block direct scraping
+4. **Summarization**: Applies a content extraction algorithm to identify the most important information
+5. **Response**: Returns a formatted HTML summary with website type detection
+
+## 📚 API Usage
+
+The project offers a simple API endpoint for summarization:
+
+```
+POST /api/summarize
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Request Body:**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```json
+{
+  "url": "https://example.com"
+}
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Response:**
 
-## Learn More
+```json
+{
+  "summary": "<h2>Page Title</h2><p>Summary content...</p>..."
+}
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Frontend**: React 19, Next.js 15, Tailwind CSS 4
+- **Backend**: Next.js API Routes
+- **Web Scraping**: Axios, Cheerio
+- **Icons**: React Icons
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📝 Future Improvements
 
-## Deploy on Vercel
+- Integration with OpenAI or other AI services for more sophisticated summarization
+- Browser extension for one-click summarization
+- User accounts to save favorite summaries
+- Support for additional content types (PDFs, academic papers, etc.)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📄 License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🙏 Acknowledgements
+
+- Next.js team for the excellent framework
+- Vercel for hosting and deployment
+- Contributors and users who provide feedback
+
+---
+
+<div align="center">
+  <p>Made with ❤️ using Next.js and Tailwind CSS by Bimasha Zaman</p>
+</div>
